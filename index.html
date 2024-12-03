@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            position: relative;
+            background-color: #A9B2A6; /* Color gris verdoso */
+            color: #333; /* Color del texto */
+        }
+        #logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 75px; /* Ajusta el tamaño del logo */
+        }
+        h1 {
+            font-size: 2.5em;
+            margin: 20px 0;
+            text-align: center;
+        }
+        input[type="text"] {
+            padding: 10px;
+            font-size: 1em;
+            border: 2px solid #333;
+            border-radius: 5px;
+            width: 300px; /* Ancho del cuadro de texto */
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            background-color: #d489ff; /* Color verde */
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #bd0094; /* Color verde más oscuro al pasar el ratón */
+        }
+        #mensaje {
+            margin-top: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <img id="logo" src="image (4).png" alt="Logo">
+    
+    <h1>bebdjd-6136</h1>
+    
+    <input type="text" id="respuesta" placeholder="Escribe tu respuesta aquí">
+    <button onclick="verificarRespuesta()">Enviar</button>
+    
+    <div id="mensaje"></div>
+
+    <script>
+        function verificarRespuesta() {
+            const respuestaCorrecta = "2"; // Cambia esto por la respuesta correcta que deseas
+            const respuestaUsuario = document.getElementById('respuesta').value;
+
+            const mensajeDiv = document.getElementById('mensaje');
+            if (respuestaUsuario === respuestaCorrecta) {
+                mensajeDiv.innerText = "01101000 01110100 01110100 01110000 01110011 00111010 00101111 00101111 01110000 01100001 01110011 01110100 01100101 01100010 01101001 01101110 00101110 01100011 01101111 01101101 00101111 01010010 01010011 01110010 01000001 01000010 01000100 01110111 01100100";
+                mensajeDiv.style.color = "green"; // Color verde para respuesta correcta
+            } else {
+                mensajeDiv.innerText = "Respuesta incorrecta. Inténtalo de nuevo.";
+                mensajeDiv.style.color = "red"; // Color rojo para respuesta incorrecta
+            }
+        }
+    </script>
+
+</body>
+</html>
